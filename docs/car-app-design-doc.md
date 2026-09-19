@@ -147,3 +147,33 @@ _(empty — fill in as decisions are made)_
 - [ ] Database choice
 - [ ] Auth provider
 - [ ] Image storage
+
+---
+
+## 8. Future ideas (unscoped, post-v2)
+
+Not committed to, not scheduled — parked here so they aren't forgotten.
+Both depend on having real data to work with, so neither is realistic
+before v1's data model exists and is populated.
+
+- **Build-style recommendation.** User describes a style/chassis (e.g.
+  "Meihan-style drift S13") and gets pointed toward related accounts and
+  a common build setup for that style. Needs real build-log data to
+  retrieve over (RAG, not MCP — MCP connects an AI *client* to external
+  tools, it's not the right shape for an in-app feature like this).
+  Blocked on v2+ having enough real user build data to retrieve
+  meaningfully, otherwise it's just an LLM making plausible-sounding
+  stuff up.
+
+- **Torque-spec lookup from workshop manual PDFs.** User asks for a spec
+  (e.g. "S13 lower control arm torque") and the app surfaces the
+  matching page/table from an uploaded manual. Good RAG candidate since
+  the source data (manuals) is fixed/authoritative rather than needing
+  a user base first. Caveats to revisit when this gets picked up:
+  - Many older JDM manuals are scanned images, not real text — plain
+    text extraction won't work; needs OCR or a parser built for
+    scanned/tabular PDFs (e.g. `llama-parse`).
+  - Safety-critical data — the LLM's job should be retrieval only
+    (surface the exact page/table), never generating a torque value
+    from its own reasoning/memory. Always ground the answer in a
+    citable excerpt from the source manual.
