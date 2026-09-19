@@ -1,26 +1,40 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 24px;
-  border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 16px 24px;
+    border-top: 1px;
+    border-bottom: 1px solid var(--border);
+}
+.header__search-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.header__logo {
-  font-weight: 700;
-  font-size: 20px;
+.header__search-icon {
+    position: absolute;
+    left: 12px;
+    color: var(--text-muted);
+    pointer-events: none;   /* clicks pass through to the input underneath */
 }
 
-.header__nav {
-  display: flex;
-  gap: 20px;
-}
-
-.header__nav a {
-  color: var(--text-muted);
-  text-decoration: none;
-}
-
-.header__nav a:hover {
+.header input[type="text"] {
+  padding: 8px 12px 8px 36px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background-color: var(--bg);
   color: var(--text);
+  width: 400px;
+  height: 40px;
+}
+
+.header-actions{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto; /* pushes the actions to the right side of the header */
+}
+.header .user-icon img{
+    border-radius: 50%;
 }

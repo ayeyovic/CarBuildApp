@@ -3,6 +3,9 @@
     border: 1px solid gray;
     border-radius: 8px;
 }
+.post .post-text {
+    color: white;
+}
 
 .post img {
     width: 600px;

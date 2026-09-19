@@ -1,3 +1,30 @@
-.navbar{
-    color:aqua
+/* replaced the placeholder `color: aqua` test rule with real layout/theme
+   styles, ported over from Header.css (which we're removing) */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
 }
+
+.navbar__logo {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0; /* h1 has a default margin that threw off the flex alignment */
+}
+
+.navbar__links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar__links a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.navbar__links a:hover {
+    color: var(--text);
+}
+
