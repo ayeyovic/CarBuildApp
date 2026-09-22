@@ -1,3 +1,4 @@
+import Avatar from './Avatar'
 import './Header.css'
 
 function Header() {
@@ -31,9 +32,11 @@ function Header() {
 
                     </div>
 
-                <div className="user-icon">
-                    <img src="/images/pfp.jpg" alt="Profile Picture" width="40" height="40"    />
-                </div>
+                    <div className="user-icon">
+                        <Avatar src="/images/pfp.jpg" alt="Profile Picture" />
+                    </div>
+
+                    
 
 
             </div>    

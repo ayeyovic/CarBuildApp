@@ -36,5 +36,5 @@
     margin-left: auto; /* pushes the actions to the right side of the header */
 }
 .header .user-icon img{
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }

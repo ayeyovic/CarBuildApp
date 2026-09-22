@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import './globals.css'
 
 // removed the default Geist font loading (next/font/google) — nothing
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         <Header />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )

@@ -9,6 +9,11 @@ export default function Home() {
   return (
     <main className="home">
       <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
     </main>
   )
 }
